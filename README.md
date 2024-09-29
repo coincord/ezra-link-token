@@ -1,6 +1,6 @@
-# Sample Hardhat Project
+# Ezrah Link
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+The Ezrah Link CND token. This project encompasses the various version releases of this smart contract.
 
 Try running some of the following tasks:
 
