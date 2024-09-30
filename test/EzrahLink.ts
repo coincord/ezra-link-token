@@ -2,6 +2,8 @@ import hre, { ethers, upgrades } from "hardhat";
 import { expect } from "chai";
 import { loadFixture } from "@nomicfoundation/hardhat-network-helpers";
 
+const INITIAL_AMOUNT = 1000000000;
+
 describe("Ezrah Link", function () {
   // async function deployEzrahLink() {
   //   const [owner, otherAccount] = await ethers.getSigners();
@@ -19,7 +21,7 @@ describe("Ezrah Link", function () {
     const EzrahLink = await hre.ethers.getContractFactory("EzrahLink");
     const ezrahLink = await upgrades.deployProxy(
       EzrahLink,
-      [owner.address, owner.address, owner.address], // Pass parameters to the initialize function
+      [owner.address, owner.address, owner.address, INITIAL_AMOUNT], // Pass parameters to the initialize function
       { initializer: "initialize" }
     );
 

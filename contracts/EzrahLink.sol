@@ -27,7 +27,8 @@ contract EzrahLink is
     function initialize(
         address defaultAdmin,
         address pauser,
-        address minter
+        address minter,
+        uint256 initialAmount
     ) public initializer {
         __ERC20_init("EzrahLink", "CND");
         __ERC20Burnable_init();
@@ -37,7 +38,7 @@ contract EzrahLink is
 
         _grantRole(DEFAULT_ADMIN_ROLE, defaultAdmin);
         _grantRole(PAUSER_ROLE, pauser);
-        _mint(msg.sender, 1000000000 * 10 ** decimals());
+        _mint(msg.sender, initialAmount * 10 ** decimals());
         _grantRole(MINTER_ROLE, minter);
     }
 
